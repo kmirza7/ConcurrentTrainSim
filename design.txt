@@ -1,0 +1,4 @@
+In our MBTA simulation, each train and passenger operates on a separate thread, ensuring parallel processing and efficient resource utilization.
+To avoid deadlocks, we implement granular locking with ReentrantLock, ensuring that locks are acquired and released in a consistent order across threads.
+Additionally, we utilize the tryLock() method to prevent threads from being indefinitely blocked and ensure that locks are promptly released in case of interruptions,
+further mitigating the risk of deadlocks. This approach ensures smooth and concurrent execution of trains and passengers within the simulation.
